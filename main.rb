@@ -1,7 +1,8 @@
 require 'pry'
 require 'colorize'
 
-def sum_array(a, b)
+def sum_array(a)
+  b = 0
   a.each {|n| b += n}
   puts "The sum of #{a} is equal to #{b}."
 end
@@ -41,7 +42,18 @@ def fizzbuzz
   end
 end
 
-# sum_array([1, 2, 3, 4, 5]) 18
+def multiples(n, v) 
+  a = [] 
+  m = v / n 
+  while m > 0 
+    a << n * m 
+    m -= 1 
+  end 
+  puts a
+end
+
+# sum_array([1, 2, 3, 4, 5]) 19
 # rock_paper_scissors 88
 # fizzbuzz 66
+# multiples(3, 40) 33
 
