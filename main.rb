@@ -52,8 +52,19 @@ def multiples(n, v)
   puts a
 end
 
+def cipher(s, n)
+end
+
+def counter(s, b)
+  a = s.scan(/#{b}/)
+  puts "#{b} occurs in #{s} #{a.length} times."
+end
+
 # sum_array([1, 2, 3, 4, 5]) 19
 # rock_paper_scissors 88
 # fizzbuzz 66
 # multiples(3, 40) 33
+# cipher()
+# counter('tacotacotacocattacotacotaco', 'taco') 19
+
 
