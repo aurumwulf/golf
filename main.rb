@@ -8,10 +8,10 @@ end
 
 def rock_paper_scissors
   puts 'Enter 1 for Rock, 2 for Paper, 3 for Scissors.'
-  u = gets.to_i
-  w = 'Win'
-  l = 'Lose'
-  t = 'Tie'
+  u = gets.to_i 
+  w = 'W'
+  l = 'L'
+  t = 'T'
   c = 1 + rand(3)
   case u
     when c
@@ -26,5 +26,22 @@ def rock_paper_scissors
   puts r    
 end
 
-# sum_array([1, 2, 3, 4, 5])
-# rock_paper_scissors
+def fizzbuzz
+  n = 1 + rand(100)
+  
+  case true
+    when n % 5 == 0 && n % 3 == 0
+      puts "FIZZBUZZ"
+    when n % 3 == 0 
+      puts "FIZZ"
+    when n % 5 == 0 
+      puts "BUZZ"
+    else
+      puts n
+  end
+end
+
+# sum_array([1, 2, 3, 4, 5]) 18
+# rock_paper_scissors 88
+# fizzbuzz 66
+
