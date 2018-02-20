@@ -60,11 +60,36 @@ def counter(s, b)
   puts "#{b} occurs in #{s} #{a.length} times."
 end
 
+def pairs(a)
+end
+
+def lovetest(f, s) 3
+  a = f.scan(/\w/) 14
+  b = s.scan(/\w/) 14
+  t = a.length + b.length 19
+  m = 0 3
+  a.uniq.each do |c| 16
+    b.uniq.each do |d| 16
+      if c == d 6
+        m += 1 4
+      end 3
+    end 3
+  end 3
+  puts "Total Chars: #{t}"
+  puts "Chars In Common: #{m}"
+  puts "Solution: #{t/m}"
+end
+
+def shoppinglist()
+end
+
 # sum_array([1, 2, 3, 4, 5]) 19
 # rock_paper_scissors 88
 # fizzbuzz 66
 # multiples(3, 40) 33
 # cipher()
 # counter('tacotacotacocattacotacotaco', 'taco') 19
-
+# pairs()
+# lovetest('I love this code', 'This code loves me') 104
+# shoppinglist()
 
