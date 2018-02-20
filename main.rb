@@ -77,7 +77,10 @@ def lovetest(f, s)
   puts "Solution: #{t/m}"
 end
 
-def shoppinglist()
+def shoppinglist(a)
+  b = {}
+  a.uniq.sort.each_with_index { |v, i| b[i] = v }
+  puts "#{b}"
 end
 
 # sum_array([1, 2, 3, 4, 5]) #19
@@ -88,4 +91,4 @@ end
 # counter('tacotacotacocattacotacotaco', 'taco') #19
 # pairs([['A', 'B'], ['C', 'D']]) #1
 # lovetest('I love this code', 'This code loves me') #94
-# shoppinglist()
+shoppinglist(['Beans', 'Ramen', 'Bacon', 'Pudding', 'Bacon'])
