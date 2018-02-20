@@ -46,7 +46,7 @@ def multiples(n, v)
   a = [] 
   m = v / n 
   while m > 0 
-    a << n * m 
+    a << n * m
     m -= 1 
   end 
   puts a
@@ -60,8 +60,7 @@ def cipher(s, o)
 end
 
 def counter(s, b)
-  a = s.scan(/#{b}/)
-  puts "#{b} occurs in #{s} #{a.length} times."
+  puts "#{b} occurs in #{s} #{s.scan(/#{b}/).length} times."
 end
 
 def pairs(a)
@@ -71,14 +70,13 @@ end
 def lovetest(f, s) 
   a = f.scan(/\w/) 
   b = s.scan(/\w/) 
-  t = (a + b).length
   m = 0 
-  a.uniq.each do |c|
-    b.uniq.each { |d| m += 1 if c == d }
-  end
-  puts "Total Chars: #{t}"
+  a.uniq.each do |c| 
+    b.uniq.each { |d| m += 1 if c == d } 
+  end 
+  puts "Total Chars: #{(a + b).length}"
   puts "Chars In Common: #{m}"
-  puts "Solution: #{t/m}"
+  puts "Solution: #{(a + b).length / m}"
 end
 
 def shoppinglist(a)
@@ -92,7 +90,7 @@ end
 # fizzbuzz #66
 # multiples(3, 40) #33
 # cipher('ab', 3) #73
-# counter('tacotacotacocattacotacotaco', 'taco') #19
+# counter('tacotacotacocattacotacotaco', 'taco') #3
 # pairs([['A', 'B'], ['C', 'D']]) #1
-# lovetest('I love this code', 'This code loves me') #94
+# lovetest('I love this code', 'This code loves me') #76
 # shoppinglist(['Beans', 'Ramen', 'Bacon', 'Pudding', 'Bacon']) #45
