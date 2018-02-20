@@ -9,21 +9,21 @@ end
 
 def rock_paper_scissors
   puts 'Enter 1 for Rock, 2 for Paper, 3 for Scissors.'
-  u = gets.to_i 
-  w = 'W'
-  l = 'L'
-  t = 'T'
-  c = 1 + rand(3)
-  case u
-    when c
-      r = t
-    when 1
-      r = c == 3 ? w : l
-    when 2
-      r = c == 1 ? w : l
-    else
-      r = c == 2 ? w : l
-  end  
+  u = gets 
+  w = 'W' 
+  l = 'L' 
+  t = 'T' 
+  c = 1 + rand(3) 
+  case u 
+    when c 
+      r = t 
+    when 1 
+      r = c == 3 ? w : l 
+    when 2 
+      r = c == 1 ? w : l 
+    else 
+      r = c == 2 ? w : l 
+  end 
   puts r    
 end
 
@@ -31,15 +31,15 @@ def fizzbuzz
   n = 1 + rand(100)
   
   case true
-    when n % 5 == 0 && n % 3 == 0
+    when n % 5 == 0 && n % 3 == 0 
       puts "FIZZBUZZ"
     when n % 3 == 0 
       puts "FIZZ"
     when n % 5 == 0 
       puts "BUZZ"
-    else
+    else 
       puts n
-  end
+  end 
 end
 
 def multiples(n, v) 
@@ -66,7 +66,7 @@ end
 def lovetest(f, s) 
   a = f.scan(/\w/) 
   b = s.scan(/\w/) 
-  t = a.length + b.length
+  t = (a + b).length
   m = 0 
   a.uniq.each do |c|
     b.uniq.each { |d| m += 1 if c == d }
@@ -79,13 +79,12 @@ end
 def shoppinglist()
 end
 
-# sum_array([1, 2, 3, 4, 5]) 19
-# rock_paper_scissors 88
-# fizzbuzz 66
-# multiples(3, 40) 33
+# sum_array([1, 2, 3, 4, 5]) #19
+# rock_paper_scissors #92
+# fizzbuzz #66
+# multiples(3, 40) #33
 # cipher()
-# counter('tacotacotacocattacotacotaco', 'taco') 19
+# counter('tacotacotacocattacotacotaco', 'taco') #19
 # pairs()
-# lovetest('I love this code', 'This code loves me') 98
+# lovetest('I love this code', 'This code loves me') #94
 # shoppinglist()
-
