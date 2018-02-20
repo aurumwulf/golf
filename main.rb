@@ -61,6 +61,7 @@ def counter(s, b)
 end
 
 def pairs(a)
+  puts "#{a.flatten.shuffle.each_slice(2).to_a}"
 end
 
 def lovetest(f, s) 
@@ -85,6 +86,6 @@ end
 # multiples(3, 40) #33
 # cipher()
 # counter('tacotacotacocattacotacotaco', 'taco') #19
-# pairs()
+# pairs([['A', 'B'], ['C', 'D']]) #1
 # lovetest('I love this code', 'This code loves me') #94
 # shoppinglist()
