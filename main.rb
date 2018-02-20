@@ -66,15 +66,11 @@ end
 def lovetest(f, s) 
   a = f.scan(/\w/) 
   b = s.scan(/\w/) 
-  t = a.length + b.length 
+  t = a.length + b.length
   m = 0 
-  a.uniq.each do |c| 
-    b.uniq.each do |d| 
-      if c == d 
-        m += 1 
-      end 
-    end 
-  end 
+  a.uniq.each do |c|
+    b.uniq.each { |d| m += 1 if c == d }
+  end
   puts "Total Chars: #{t}"
   puts "Chars In Common: #{m}"
   puts "Solution: #{t/m}"
@@ -90,6 +86,6 @@ end
 # cipher()
 # counter('tacotacotacocattacotacotaco', 'taco') 19
 # pairs()
-# lovetest('I love this code', 'This code loves me') 104
+# lovetest('I love this code', 'This code loves me') 98
 # shoppinglist()
 
