@@ -63,18 +63,18 @@ end
 def pairs(a)
 end
 
-def lovetest(f, s) 3
-  a = f.scan(/\w/) 14
-  b = s.scan(/\w/) 14
-  t = a.length + b.length 19
-  m = 0 3
-  a.uniq.each do |c| 16
-    b.uniq.each do |d| 16
-      if c == d 6
-        m += 1 4
-      end 3
-    end 3
-  end 3
+def lovetest(f, s) 
+  a = f.scan(/\w/) 
+  b = s.scan(/\w/) 
+  t = a.length + b.length 
+  m = 0 
+  a.uniq.each do |c| 
+    b.uniq.each do |d| 
+      if c == d 
+        m += 1 
+      end 
+    end 
+  end 
   puts "Total Chars: #{t}"
   puts "Chars In Common: #{m}"
   puts "Solution: #{t/m}"
