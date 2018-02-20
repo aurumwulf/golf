@@ -52,7 +52,11 @@ def multiples(n, v)
   puts a
 end
 
-def cipher(s, n)
+def cipher(s, o)
+  a = ('a'..'z').to_a
+  b = a.zip(a.rotate(o)).to_h
+  n = s.chars.map { |c| b.fetch(c)}
+  puts "#{n.join('')}"
 end
 
 def counter(s, b)
@@ -87,8 +91,8 @@ end
 # rock_paper_scissors #92
 # fizzbuzz #66
 # multiples(3, 40) #33
-# cipher()
+# cipher('ab', 3) #73
 # counter('tacotacotacocattacotacotaco', 'taco') #19
 # pairs([['A', 'B'], ['C', 'D']]) #1
 # lovetest('I love this code', 'This code loves me') #94
-shoppinglist(['Beans', 'Ramen', 'Bacon', 'Pudding', 'Bacon'])
+# shoppinglist(['Beans', 'Ramen', 'Bacon', 'Pudding', 'Bacon']) #45
